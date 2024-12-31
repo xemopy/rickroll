@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get ricked :></title>
+    <style>
+        /* Make the video fill the whole screen */
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+  <video autoplay="autoplay" muted loop>
+    <source src="rickroll.mp4" type="video/mp4">
+    Your browser can't play this video (Lucky)
+  </video>
+
+  <script>
+    // Make the video go fullscreen as soon as the page loads
+    document.querySelector('video').requestFullscreen().catch(err => {
+      console.log("Error attempting to enable fullscreen: ", err);
+    });
+  </script>
+</body>
+</html>
